@@ -33,7 +33,8 @@ public class Translater {
                 case "4": translateUkr(); break;
                 case "0": break;
                 default:
-                    System.out.println("error");break;
+                    System.out.println("error");
+                    break;
             }
         }
     }

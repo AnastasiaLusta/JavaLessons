@@ -12,6 +12,7 @@ public class Main {
 //        else
 //            System.out.println("!==");
 //        new Complex().Run();
-        new Translater().Run();
+        new DataTypes().Run();
+//        new Translater().Run();
     }
 }
