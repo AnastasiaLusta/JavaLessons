@@ -1,6 +1,8 @@
 package step.learning;
 
 
+import step.learning.oop.Library;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println(ConsoleColors.GREEN);
@@ -12,7 +14,8 @@ public class Main {
 //        else
 //            System.out.println("!==");
 //        new Complex().Run();
-        new DataTypes().Run();
+//        new DataTypes().Run();
 //        new Translater().Run();
+        new Library().Run();
     }
 }
