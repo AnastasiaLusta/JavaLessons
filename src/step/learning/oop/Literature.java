@@ -12,8 +12,4 @@ public abstract class Literature {
         this.title = title;
         return this;
     }
-
-    // abstract method that overrides in Book and Journal classes
-    public abstract void print();
-
 }
