@@ -1,0 +1,24 @@
+package step.learning.serial;
+
+import java.io.Serializable;
+
+public class DataObject implements Serializable {
+    private int privateField;
+    private transient String transField;
+    protected float protectedField;
+    public String publicField;
+
+    public DataObject(Object... args) {
+        privateField = args.length > 0 ? (int) args[0] : -1;
+        protectedField = args.length > 1 ? (float) args[1] : -1;
+        publicField = args.length > 2 ? (String) args[2] : "-";
+        transField = args.length > 3 ? (String) args[3] : "-";
+
+    }
+
+    @Override
+    public String toString() {
+        return String.format("{private: %d | protected: %f | public: %s | transient: %s}", privateField, protectedField, publicField, transField);
+    }
+
+}

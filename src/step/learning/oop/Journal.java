@@ -1,6 +1,8 @@
 package step.learning.oop;
 
-public class Journal extends Literature implements Printable, Periodic{
+import java.io.Serializable;
+
+public class Journal extends Literature implements Printable, Periodic, Serializable {
     private Integer number;
 
     // getter and setter for number variable

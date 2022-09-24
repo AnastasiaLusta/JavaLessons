@@ -1,6 +1,8 @@
 package step.learning.oop;
 
-public class Book extends Literature implements Printable{
+import java.io.Serializable;
+
+public class Book extends Literature implements Printable, Serializable {
     private String author;
 
     public String getAuthor() {

@@ -1,12 +1,13 @@
 package step.learning.oop;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Newspaper extends Literature implements Printable, Periodic{
+public class Newspaper extends Literature implements Printable, Periodic, Serializable {
     private Date date;
     private Calendar calendar;
     private LocalDate localDate;
