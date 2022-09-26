@@ -1,6 +1,7 @@
 package step.learning;
 
 
+import step.learning.files.FilesDemo;
 import step.learning.oop.Library;
 import step.learning.serial.SerializationDemo;
 
@@ -17,7 +18,8 @@ public class Main {
 //        new Complex().Run();
 //        new DataTypes().Run();
 //        new Translater().Run();
-        new Library().run();
+//        new Library().run();
 //        new SerializationDemo().run();
+        new FilesDemo().run();
     }
 }
