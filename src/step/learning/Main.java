@@ -1,6 +1,7 @@
 package step.learning;
 
 
+import step.learning.annotations.AnnotationDemo;
 import step.learning.files.FilesDemo;
 import step.learning.oop.Library;
 import step.learning.serial.SerializationDemo;
@@ -20,6 +21,7 @@ public class Main {
 //        new Translater().Run();
 //        new Library().run();
 //        new SerializationDemo().run();
-        new FilesDemo().run();
+//        new FilesDemo().run();
+        new AnnotationDemo().run();
     }
 }
