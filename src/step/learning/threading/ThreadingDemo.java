@@ -24,29 +24,6 @@ public class ThreadingDemo {
      * Creates N Threads and makes them colorful
      */
     private void createThreads(int amount) {
-//        Object obj = null;
-//        var rand = new Random();
-//        var colors = ConsoleColors.class;
-//        var fields = colors.getDeclaredFields();
-//        for (var i = 1; i<amount+1; i++){
-//            if (obj == null) {
-//                try {
-//                    obj = colors.getDeclaredConstructor().newInstance();
-//                } catch (Exception ex) {
-//                    System.out.println("Error: "+ex.getMessage());
-//                }
-//            }
-//            var k = rand.nextInt()%fields.length;
-//            try {
-//                System.out.print(fields[k].get(obj));
-//                int finalI = i;
-//                new Thread(() -> System.out.printf("Thread %d works", finalI));
-//                System.out.print(ConsoleColors.RESET);
-//                System.out.println();
-//            } catch (IllegalAccessException e) {
-//                System.out.println("Error: "+e.getMessage());
-//            }
-//        }
         Object obj = null;
         var rand = new Random();
         var colors = ConsoleColors.class;
