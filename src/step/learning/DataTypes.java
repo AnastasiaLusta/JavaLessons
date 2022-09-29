@@ -1,6 +1,11 @@
 package step.learning;
 
+import step.learning.annotations.DemoClass;
+import step.learning.annotations.EntryPoint;
+
+@DemoClass(priority = 1)
 public class DataTypes {
+    @EntryPoint
     public void Run(){
         byte bx = -100;   // В Java все числовые типы - знаковые (беззнаковых нет)
         byte by = -0x3C;

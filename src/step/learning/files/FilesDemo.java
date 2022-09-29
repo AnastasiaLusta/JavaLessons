@@ -1,12 +1,17 @@
 package step.learning.files;
 
+import step.learning.annotations.DemoClass;
+import step.learning.annotations.EntryPoint;
+
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
+@DemoClass
 public class FilesDemo {
     Scanner kbScanner = new Scanner(System.in);
 
+    @EntryPoint
     public void run() {
 //        fsDemo();
 //        isDemo();
@@ -71,9 +76,10 @@ public class FilesDemo {
 
     /**
      * Reads all content from file
+     *
      * @param path
      */
-    private void readFile(String path){
+    private void readFile(String path) {
         String fileContent;
         StringBuilder sb = new StringBuilder();
 

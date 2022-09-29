@@ -1,6 +1,9 @@
 package step.learning;
-import java.util.*;
+import step.learning.annotations.DemoClass;
+import step.learning.annotations.EntryPoint;
 
+import java.util.*;
+@DemoClass
 public class Complex {
     private Random random;
     public Complex(){
@@ -78,6 +81,7 @@ public class Complex {
         String str = kbScanner.nextLine();
 
     }
+    @EntryPoint
     public void Run(){
 //        arraysDemo();
         collectionsDemo();

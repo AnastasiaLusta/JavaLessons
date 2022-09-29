@@ -1,11 +1,14 @@
 package step.learning.oop;
 
+import step.learning.annotations.DemoClass;
+import step.learning.annotations.EntryPoint;
+
 import java.io.*;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+@DemoClass
 public class Library {
     Scanner kbScanner = new Scanner(System.in);
     private List<Literature> funds;
@@ -247,6 +250,7 @@ public class Library {
         }
     }
 
+    @EntryPoint
     public void run() {
         // creating objects of classes Book and Journal
         add(new Book().setAuthor("Knuth").setTitle("Art of programming"));

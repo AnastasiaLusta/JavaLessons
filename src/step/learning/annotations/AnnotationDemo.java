@@ -4,10 +4,12 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+@DemoClass
 public class AnnotationDemo {
     @FieldAnnotation(value = "all versions", priority = -1)
     private String sep = "-----------------------------------";
 
+    @EntryPoint
     @MethodAnnotation("Entry Point")
     public void run() {
         Class<?> type = ClassWithAnnotation.class;
@@ -42,6 +44,7 @@ public class AnnotationDemo {
 
     /**
      * Checks if class has MarkerAnnotation
+     *
      * @param type
      */
     private void checkClassAnnotation(Class<?> type) {
@@ -55,6 +58,7 @@ public class AnnotationDemo {
 
     /**
      * Shows methods that have MethodAnnotation
+     *
      * @param type
      */
     private void showMethodAnnotation(Class<?> type) {
@@ -89,6 +93,7 @@ public class AnnotationDemo {
 
     /**
      * Shows fields and their values that have FieldAnnotation
+     *
      * @param type
      */
     private void showFieldAnnotation(Class<?> type) {

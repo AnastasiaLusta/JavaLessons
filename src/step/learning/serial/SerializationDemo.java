@@ -1,13 +1,16 @@
 package step.learning.serial;
 
 import org.w3c.dom.ls.LSOutput;
+import step.learning.annotations.DemoClass;
+import step.learning.annotations.EntryPoint;
 
 import javax.xml.crypto.Data;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@DemoClass
 public class SerializationDemo {
+    @EntryPoint
     public void run(){
 //        serialize();
 //        deserialize();
