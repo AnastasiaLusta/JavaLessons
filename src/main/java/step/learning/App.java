@@ -21,17 +21,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class App {
-    @Inject
-    StringService stringService;
-    //    @Inject
-//    @Named("ten")
-//    private final RandomProvider randomProvider;
-    @Inject
-    @Named("128")
-    private HashService hash128;
-    @Inject
-    @Named("160")
-    private HashService hash160;
+    private final StringService stringService;
+    private final DateService dateService;
+    private final RandomProvider randomProvider;
+    private final HashService hash128;
+    private final HashService hash160;
 
     @Inject
     @Named("MsConnectionString")
@@ -40,22 +34,25 @@ public class App {
     @Inject
     @Named("OracleConnectionString")
     private String OracleConnectionString;
-    @Inject
-    private DateService dateService;
 
-//    public App(@Named("ten") RandomProvider randomProvider) {
-//        this.randomProvider = randomProvider;
-//    }
+    @Inject
+    public App(DateService timeService, StringService stringService, @Named("ten") RandomProvider randomProvider, @Named("128") HashService hash128, @Named("160") HashService hash160) {
+        this.randomProvider = randomProvider;
+        this.stringService = stringService;
+        this.dateService = timeService;
+        this.hash128 = hash128;
+        this.hash160 = hash160;
+    }
 
     public void run() {
-//        System.out.printf("DateService date - %s time - %s", dateService.getDate(), dateService.getTime());
-//        System.out.println("Ioc Demo");
-//        System.out.println("StringService: " + stringService.getString());
-////        System.out.println("Random:" + randomProvider);
-//        System.out.println("Hash service (128bit)" + hash128.hash("Hello"));
-//        System.out.println("Hash service (160bit)" + hash160.hash("Hello"));
-//        System.out.println("MsConnectionString:" + MsConnectionString);
-//        System.out.println("OracleConnectionString:" + OracleConnectionString);
+        System.out.printf("DateService date - %s time - %s", dateService.getDate(), dateService.getTime());
+        System.out.println("Ioc Demo");
+        System.out.println("StringService: " + stringService.getString());
+        System.out.println("Random:" + randomProvider.getInt());
+        System.out.println("Hash service (128bit)" + hash128.hash("Hello"));
+        System.out.println("Hash service (160bit)" + hash160.hash("Hello"));
+        System.out.println("MsConnectionString:" + MsConnectionString);
+        System.out.println("OracleConnectionString:" + OracleConnectionString);
         runMenu();
     }
 

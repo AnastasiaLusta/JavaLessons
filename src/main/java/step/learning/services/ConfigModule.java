@@ -21,21 +21,21 @@ public class ConfigModule extends AbstractModule {
         bind(String.class).annotatedWith(Names.named("MsConnectionString")).toInstance("Data Source = MSSQLLocalDb;...");
     }
 
-//    @Provides
-//    @Named("max")
-//    RandomProvider getRandomProvider() {
-//        return new RandomProviderMax();
-//    }
-
     @Provides
     @Named("OracleConnectionString")
     String getOracleCS() {
         return "oracle:host = localhost...";
     }
 
-//    @Provides
-//    @Named("ten")
-//    RandomProvider getRandomProviderTen() {
-//        return new RandomProviderTen();
-//    }
+    @Provides
+    @Named("max")
+    RandomProvider getRandomProvider() {
+        return new RandomProviderMax();
+    }
+
+    @Provides
+    @Named("ten")
+    RandomProvider getRandomProviderTen() {
+        return new RandomProviderTen();
+    }
 }

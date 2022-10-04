@@ -1,6 +1,7 @@
 package step.learning.services;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class StringService {
 //    @Inject
@@ -8,9 +9,11 @@ public class StringService {
 
     @Inject
     private SymbolService charService;
-//    @Inject
-//    RandomProvider randomProvider;
+    @Inject
+    @Named("max")
+    RandomProvider randomProvider;
+
     public String getString() {
-        return String.format("Hello, %c, World times", charService.getChar());
+        return String.format("Hello, %c, World %d times", charService.getChar(), randomProvider.getInt());
     }
 }
